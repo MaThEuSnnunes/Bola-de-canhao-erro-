@@ -1,0 +1,18 @@
+class CannonBall{
+    constructor(x,y) { var options={
+        isStatic:true
+    };
+      this.x = x;
+      this.y = y;
+      this.r = 30;
+      this.body=Bodies.circle(x,y,this.r,options)
+      this.image=loadImage("./assets/cannoball.png");
+      World.add(word,this.body);
+    }
+    display() { 
+        var pos = this.body.position;
+         push(); 
+         imageMode(CENTER);
+          image(this.image, pos.x, pos.y, this.r, this.r); 
+          pop(); }
+    }
